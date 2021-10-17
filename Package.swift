@@ -8,5 +8,12 @@ let package = Package(
     ],
     products: [
         .library(name: "StringFilter", targets: ["StringFilter"]),
+    ],
+    dependencies: [
+        // no dependencies
+    ],
+    targets: [
+        .target(name: "StringFilter", dependencies: []),
+        .testTarget(name: "StringFilterTests", dependencies: ["StringFilter"]),
     ]
 )
