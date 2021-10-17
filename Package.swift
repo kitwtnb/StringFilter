@@ -2,5 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "StringFilter"
+    name: "StringFilter",
+    platforms: [
+        .iOS(.v10),
+    ],
+    products: [
+        .library(name: "StringFilter", targets: ["StringFilter"]),
+    ]
 )
