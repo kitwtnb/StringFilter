@@ -43,7 +43,7 @@ extension String {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return self }
 #endif
         let mutableString = NSMutableString(string: self)
-        regex.enumerateMatches(in: self, options: [], range: NSMakeRange(0, characters.count)) { result, _, _ in
+        regex.enumerateMatches(in: self, options: [], range: NSMakeRange(0, count)) { result, _, _ in
             guard let result = result else { return }
             let range = result.range
             let matched = mutableString.substring(with: range)
