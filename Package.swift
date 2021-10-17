@@ -13,7 +13,7 @@ let package = Package(
         // no dependencies
     ],
     targets: [
-        .target(name: "StringFilter", dependencies: []),
-        .testTarget(name: "StringFilterTests", dependencies: ["StringFilter"]),
+        .target(name: "StringFilter", path: "StringFilter", dependencies: []),
+        .testTarget(name: "StringFilterTests", path: "Tests/StringFilter", dependencies: ["StringFilter"]),
     ]
 )
